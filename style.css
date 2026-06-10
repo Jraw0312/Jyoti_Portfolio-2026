@@ -166,8 +166,12 @@ body {
   transition: color 0.3s ease;
 }
 
+.menu a {
+  cursor: pointer;
+}
+
 .menu a:hover {
-  color: var(--cream);
+  color: var(--orange);
 }
 
 .hello {
@@ -2463,4 +2467,32 @@ font-size: 8px;
 
 .footer-privacy-link:hover {
   color: var(--orange);
+}
+
+/* Header menu underline hover */
+.menu a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #e8dfcf;
+  transition: color 0.25s ease;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background-color: #ff5a2c;
+  transition: width 0.25s ease;
+}
+
+.menu a:hover {
+  color: #ff5a2c;
+}
+
+.menu a:hover::after {
+  width: 100%;
 }
