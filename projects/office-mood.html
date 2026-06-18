@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>P4 - Jyoti Rautela</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg?v=2" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="project-detail-page">
+
+  <header class="nav">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <a class="brand-name brand-home" href="../index.html">Jyoti</a>
+      <span class="slash">/</span>
+      <span class="year">2026</span>
+    </div>
+
+    <nav class="menu">
+      <a href="../index.html#photographs">photographs</a>
+      <a href="../index.html#writing">writing</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../index.html#publications">publications</a>
+      <a href="../index.html#reading">reading</a>
+    </nav>
+
+    <a class="hello" href="../index.html#contact">
+      say hello
+      <span>→</span>
+    </a>
+  </header>
+
+  <main class="project-detail-shell">
+
+    <a class="project-detail-back" href="../index.html#projects">← BACK TO PROJECTS</a>
+
+    <section class="project-detail-gallery">
+      <div class="project-detail-image-wrap">
+        <img
+          class="project-detail-image"
+          src="../assets/images/projects/p01-01.png"
+          data-images="../assets/images/projects/p01-01.png|../assets/images/projects/p01-02.png|../assets/images/projects/p01-03.png"
+          alt="Assistive Mobility in Indian Homes"
+        >
+
+        <button class="project-detail-prev" type="button">←</button>
+        <button class="project-detail-next" type="button">→</button>
+      </div>
+
+      <div class="project-detail-gallery-footer">
+        <div class="project-detail-dots"></div>
+        <p class="project-detail-count">
+          <span class="project-current">01</span> / <span class="project-total">03</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="project-detail-intro">
+      <p class="project-detail-status">
+        <span>● ACTIVE</span>
+        <span>2026</span>
+      </p>
+
+      <h1 class="project-detail-title">
+        P5 - title
+      </h1>
+
+      <p class="project-detail-summary">
+        Write one strong 2–3 line project summary here. This should explain what the project explores, who it is for, and why it matters.
+      </p>
+
+      <div class="project-detail-info">
+        <p>ROLE</p>
+        <span>M.Des Thesis · Design Research · Prototyping</span>
+      </div>
+
+      <div class="project-detail-tags">
+        <span>HCI</span>
+        <span>ACCESSIBILITY</span>
+        <span>PARTICIPATORY DESIGN</span>
+      </div>
+    </section>
+
+    <article class="project-detail-body">
+
+      <h2>Project overview</h2>
+      <p>
+        Write your project overview here. Keep it descriptive but not too long.
+      </p>
+
+      <h2>Process</h2>
+      <p>
+        Write about methods, workshops, sketches, prototyping, or research process here.
+      </p>
+
+      <blockquote>
+        Optional highlighted quote, insight, or participant reflection can go here.
+      </blockquote>
+
+      <img src="../assets/images/projects/p01-02.png" alt="Project process image">
+
+      <h2>Outcome</h2>
+      <p>
+        Write about the final outcome, prototype, system, or learning here.
+      </p>
+
+    </article>
+
+  </main>
+
+  <script>
+    const galleryImage = document.querySelector(".project-detail-image");
+    const prevBtn = document.querySelector(".project-detail-prev");
+    const nextBtn = document.querySelector(".project-detail-next");
+    const dotsWrap = document.querySelector(".project-detail-dots");
+    const currentText = document.querySelector(".project-current");
+    const totalText = document.querySelector(".project-total");
+
+    if (galleryImage) {
+      const images = galleryImage.dataset.images.split("|");
+      let currentIndex = 0;
+
+      totalText.textContent = String(images.length).padStart(2, "0");
+
+      images.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+
+        if (index === 0) dot.classList.add("is-active");
+
+        dot.addEventListener("click", () => {
+          updateGallery(index);
+        });
+
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots = dotsWrap.querySelectorAll("button");
+
+      function updateGallery(index) {
+        currentIndex = index;
+        galleryImage.src = images[currentIndex];
+
+        currentText.textContent = String(currentIndex + 1).padStart(2, "0");
+
+        dots.forEach((dot) => dot.classList.remove("is-active"));
+        dots[currentIndex].classList.add("is-active");
+      }
+
+      prevBtn.addEventListener("click", () => {
+        const nextIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery(nextIndex);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const nextIndex = (currentIndex + 1) % images.length;
+        updateGallery(nextIndex);
+      });
+    }
+  </script>
+
+<script src="../shared.js"></script>
+
+</body>
+</html>

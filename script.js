@@ -89,7 +89,7 @@ writingCards.forEach((card) => {
     const link = card.getAttribute("data-link");
 
     if (link) {
-      window.open(link, "_blank", "noopener,noreferrer");
+      window.location.href = link;
     }
   });
 });
@@ -151,6 +151,18 @@ projectImages.forEach((projectImage) => {
       event.stopPropagation();
       updateProjectImage(index);
     });
+  });
+});
+
+const projectCards = document.querySelectorAll(".project-card");
+
+projectCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const link = card.getAttribute("data-link");
+
+    if (link && link !== "#") {
+      window.location.href = link;
+    }
   });
 });
 
