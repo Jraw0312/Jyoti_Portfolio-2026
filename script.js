@@ -3,6 +3,8 @@ const slides = document.querySelectorAll(".bg-slide");
 let currentSlide = 0;
 
 function changeSlide() {
+  if (slides.length === 0) return;
+
   slides[currentSlide].classList.remove("active");
 
   currentSlide = (currentSlide + 1) % slides.length;
@@ -10,7 +12,9 @@ function changeSlide() {
   slides[currentSlide].classList.add("active");
 }
 
-setInterval(changeSlide, 7000);
+if (slides.length > 0) {
+  setInterval(changeSlide, 7000);
+}
 
 const layoutToggle = document.querySelector(".layout-toggle");
 const photoGrid = document.querySelector(".photo-grid");
@@ -231,4 +235,140 @@ if (footerThanks) {
   );
 
   thanksObserver.observe(footerThanks);
+}
+
+/* PROJECT DETAIL CAROUSELS */
+
+const projectCarousels = document.querySelectorAll(".project-carousel");
+
+projectCarousels.forEach((carousel) => {
+  const image = carousel.querySelector(".project-carousel-image");
+  const prevBtn = carousel.querySelector(".project-carousel-prev");
+  const nextBtn = carousel.querySelector(".project-carousel-next");
+  const dotsWrap = carousel.querySelector(".project-carousel-dots");
+  const count = carousel.querySelector(".project-carousel-count");
+  const currentText = carousel.querySelector(".project-carousel-current");
+  const totalText = carousel.querySelector(".project-carousel-total");
+  const caption = carousel.querySelector(".project-carousel-caption");
+
+  if (!image || !prevBtn || !nextBtn || !dotsWrap) return;
+
+  const imageData =
+    carousel.dataset.images ||
+    image.dataset.images ||
+    image.getAttribute("src") ||
+    "";
+
+  const images = imageData
+    .split("|")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (images.length === 0) return;
+
+  const captionData =
+    carousel.dataset.captions ||
+    image.dataset.captions ||
+    "";
+
+  const captions = captionData
+    .split("|")
+    .map((item) => item.trim());
+
+  const fitData =
+    carousel.dataset.fit ||
+    image.dataset.fit ||
+    "";
+
+  const fitModes = fitData
+    .split("|")
+    .map((item) => item.trim());
+
+  let currentIndex = 0;
+
+  dotsWrap.innerHTML = "";
+
+  images.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Go to image ${index + 1}`);
+
+    dot.addEventListener("click", () => {
+      updateCarousel(index);
+    });
+
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = dotsWrap.querySelectorAll("button");
+
+  function updateCarousel(index) {
+    currentIndex = index;
+
+    image.src = images[currentIndex];
+
+    image.classList.toggle(
+      "is-contain",
+      fitModes[currentIndex] === "contain"
+    );
+
+    dots.forEach((dot) => dot.classList.remove("is-active"));
+
+    if (dots[currentIndex]) {
+      dots[currentIndex].classList.add("is-active");
+    }
+
+    const currentNumber = String(currentIndex + 1).padStart(2, "0");
+    const totalNumber = String(images.length).padStart(2, "0");
+
+    if (currentText && totalText) {
+      currentText.textContent = currentNumber;
+      totalText.textContent = totalNumber;
+    } else if (count) {
+      count.textContent = `${currentNumber} / ${totalNumber}`;
+    }
+
+    if (caption) {
+      const captionText = captions[currentIndex] || "";
+      caption.textContent = captionText;
+      caption.style.display = captionText ? "block" : "none";
+    }
+  }
+
+  prevBtn.addEventListener("click", () => {
+    const nextIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel(nextIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    const nextIndex = (currentIndex + 1) % images.length;
+    updateCarousel(nextIndex);
+  });
+
+  updateCarousel(0);
+});
+
+/* PROJECT DETAIL NEXT PROJECT LINK */
+
+const projectSequence = [
+  "assistive-mobility.html",
+  "aura-mist.html",
+  "retro-walk.html",
+  "neomind.html",
+  "office-mood.html",
+  "participatory-booklet.html",
+  "expandable-wheel.html",
+  "vr-accessibility.html"
+];
+
+const nextProjectLink = document.querySelector(".project-next-link");
+
+if (nextProjectLink) {
+  const currentPage = window.location.pathname.split("/").pop();
+  const currentIndex = projectSequence.indexOf(currentPage);
+
+  if (currentIndex !== -1) {
+    const nextIndex = (currentIndex + 1) % projectSequence.length;
+    nextProjectLink.href = projectSequence[nextIndex];
+  }
 }

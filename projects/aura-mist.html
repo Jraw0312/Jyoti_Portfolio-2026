@@ -9,12 +9,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="../style.css" />
 </head>
 
-<body class="project-detail-page">
+<body class="project-detail-page aura-mist-page" id="top">
 
   <header class="nav">
     <div class="brand">
@@ -42,102 +45,551 @@
 
     <a class="project-detail-back" href="../index.html#projects">← BACK TO PROJECTS</a>
 
-    <section class="project-detail-gallery">
-      <div class="project-detail-image-wrap">
-        <img
-          class="project-detail-image"
-          src="../assets/images/projects/p01-01.png"
-          data-images="../assets/images/projects/p01-01.png|../assets/images/projects/p01-02.png|../assets/images/projects/p01-03.png"
-          alt="Assistive Mobility in Indian Homes"
-        >
+    <!-- HERO CAROUSEL -->
+    <section
+  class="project-carousel project-hero-carousel"
+  data-images="../assets/images/projects/p02-2.png|../assets/images/projects/p02-3.png|../assets/images/projects/p02-1.png|../assets/images/projects/p02-4.png"
+  data-fit="cover|cover|cover|contain"
+  data-captions="Aura Mist explores mood regulation as atmosphere rather than measurement.|The project asks whether a room can help regulate a mood without naming it.|Ritual, scent and light became the grammar for a non-verbal interface.|The work sits between olfactory HCI, affective computing and design futuring."
+>
+  <p class="project-carousel-label">AURA MIST / OLFACTORY HCI / 2026</p>
 
-        <button class="project-detail-prev" type="button">←</button>
-        <button class="project-detail-next" type="button">→</button>
+  <div class="project-carousel-frame">
+    <img
+      class="project-carousel-image"
+      src="../assets/images/projects/p02-2.png"
+      alt="Aura Mist project visual"
+    >
+
+    <p class="project-carousel-caption"></p>
+
+    <button class="project-carousel-prev" type="button" aria-label="Previous image">←</button>
+    <button class="project-carousel-next" type="button" aria-label="Next image">→</button>
+  </div>
+
+  <div class="project-carousel-footer">
+    <div class="project-carousel-dots"></div>
+
+    <p class="project-carousel-count">
+      <span class="project-carousel-current">01</span> /
+      <span class="project-carousel-total">04</span>
+    </p>
+  </div>
+</section>
+
+    <!-- INTRO -->
+    <section class="project-detail-intro">
+      <p class="project-detail-status">
+        <span>● ARCHIVED</span>
+        <span>SPECULATIVE DESIGN</span>
+        <span>OLFACTORY HCI</span>
+      </p>
+
+      <h1 class="project-detail-title">
+        Aura Mist
+      </h1>
+
+      <p class="project-detail-summary">
+        An olfactory HCI inquiry into mood and North-Indian ritual.
+      </p>
+
+      <div class="project-detail-info">
+        <p>FOCUS</p>
+        <span>Olfactory HCI · Affective Computing · Design Futuring</span>
       </div>
 
-      <div class="project-detail-gallery-footer">
-        <div class="project-detail-dots"></div>
-        <p class="project-detail-count">
-          <span class="project-current">01</span> / <span class="project-total">03</span>
+      <div class="project-detail-info">
+        <p>METHODS</p>
+        <span>Survey · Ethnography · Speculative Workshop · Reflexive Thematic Analysis</span>
+      </div>
+
+      <div class="project-detail-info">
+        <p>PARTICIPANTS</p>
+        <span>150 survey responses · 9 workshop participants</span>
+      </div>
+
+      <div class="project-detail-tags">
+        <span>MOOD REGULATION</span>
+        <span>SCENT</span>
+        <span>RITUAL</span>
+        <span>CARE</span>
+        <span>NORTH-INDIAN DOMESTIC PRACTICE</span>
+      </div>
+    </section>
+
+    <!-- BODY BLOCK 01 -->
+    <article class="project-detail-body">
+
+      <p class="aura-opening-line">
+        Can a room help you regulate a mood by changing the air around it, not charting it?
+      </p>
+
+      <p>
+        That was the question. I did not build and test a device, so I cannot tell you it works. But nine people in a workshop showed me something I did not expect: when an interface names your mood, it stops helping.
+      </p>
+
+      <blockquote>
+        A hypothesis, not a proof, and the part I would defend.
+      </blockquote>
+
+      <h2>The problem</h2>
+
+      <p>
+        Mood apps show you data. They name a feeling, draw a graph, then leave you the hard part: what now?
+      </p>
+
+      <p>
+        People rarely struggle to notice a bad mood. They struggle with the next move.
+      </p>
+
+      <p>
+        That move is usually physical. A walk. An open window. An agarbatti lit on the floor.
+      </p>
+
+      <p>
+        I went after that gap. Not detection, the step after it.
+      </p>
+
+      <h2>The bet</h2>
+
+      <p>
+        Not a tracker. An atmosphere.
+      </p>
+
+      <p>
+        Why scent? It reaches memory and feeling before it reaches words, slow, ambient, hard to argue with.
+      </p>
+
+      <p>
+        The survey backed the direction: coping was sensory and solitary, and people wanted support without having to explain themselves.
+      </p>
+
+      <p>
+        So, a non-verbal nudge. Ritual seemed the right grammar: repetition, scent, light, a clear start and end.
+      </p>
+
+      <p>
+        The rituals are mine. I grew up with these North-Indian, largely Hindu domestic practices. The cultural authority here is my own, not a community's. That is the grounding, and the limit.
+      </p>
+
+      <h2>What I did</h2>
+
+      <div class="aura-method-grid">
+        <div>
+          <span>01</span>
+          <h3>Survey</h3>
+          <p>
+            A self-reported directional survey with 150 responses. It used week-long recall and no validated scale. It mapped the spread and pointed me toward scent.
+          </p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <h3>Ethnography</h3>
+          <p>
+            I watched how students actually regulate mood and saw scent rituals already in use. These observations, with my own background, became the Ritual cards.
+          </p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <h3>Speculative workshop</h3>
+          <p>
+            A futuring card deck: Future, Emotion, Trigger, Ritual, Modality, adapted from Ceylan Beşevli's acoustophoresis work.
+          </p>
+        </div>
+
+        <div>
+          <span>04</span>
+          <h3>Analysis</h3>
+          <p>
+            With consent, I recorded and transcribed each session, then ran reflexive thematic analysis.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        The workshop included nine students, four women, five men; six B.Tech, two M.Tech, one PhD, from mixed ethnic and religious backgrounds, in three groups.
+      </p>
+
+      <blockquote>
+        I designed this, and I already believed ritual was the answer. I read those transcripts with that bias, and tried to flag where it shaped what I saw.
+      </blockquote>
+
+    </article>
+
+    <!-- INLINE CAROUSEL 01 -->
+    <section
+      class="project-carousel project-inline-carousel"
+      data-images="../assets/images/projects/p02-8.png|../assets/images/projects/p02-6.png|../assets/images/projects/p02-5.png"
+      data-fit="contain|contain|contain"
+      data-captions="The card deck combined future context, emotional state, trigger, ritual and modality.|Ritual cards translated domestic sensory practices into speculative interaction prompts.|The workshop tested whether ritual logic could travel across students who did not necessarily practise those rituals."
+    >
+      <p class="project-carousel-label">WORKSHOP / FUTURING CARDS</p>
+
+      <div class="project-carousel-frame">
+        <img
+          class="project-carousel-image"
+          src="../assets/images/projects/aura-cards-01.jpg"
+          alt="Aura Mist card deck"
+        >
+
+        <p class="project-carousel-caption"></p>
+
+        <button class="project-carousel-prev" type="button" aria-label="Previous image">←</button>
+        <button class="project-carousel-next" type="button" aria-label="Next image">→</button>
+      </div>
+
+      <div class="project-carousel-footer">
+        <div class="project-carousel-dots"></div>
+
+        <p class="project-carousel-count">
+          <span class="project-carousel-current">01</span> /
+          <span class="project-carousel-total">03</span>
         </p>
       </div>
     </section>
 
-    <section class="project-detail-intro">
-      <p class="project-detail-status">
-        <span>● ACTIVE</span>
-        <span>2026</span>
-      </p>
-
-      <h1 class="project-detail-title">
-        Aura-Mist
-      </h1>
-
-      <p class="project-detail-summary">
-        Write one strong 2–3 line project summary here. This should explain what the project explores, who it is for, and why it matters.
-      </p>
-
-      <div class="project-detail-info">
-        <p>ROLE</p>
-        <span>M.Des Thesis · Design Research · Prototyping</span>
-      </div>
-
-      <div class="project-detail-tags">
-        <span>HCI</span>
-        <span>ACCESSIBILITY</span>
-        <span>PARTICIPATORY DESIGN</span>
-      </div>
-    </section>
-
+    <!-- BODY BLOCK 02 -->
     <article class="project-detail-body">
 
-      <h2>Project overview</h2>
-      <p>
-        Write your project overview here. Keep it descriptive but not too long.
-      </p>
+      <h2>One card draw</h2>
 
-      <h2>Process</h2>
+<section class="aura-card-draw-grid">
+
+  <article class="aura-draw-card future-card">
+    <p class="aura-draw-label">FUTURE</p>
+
+    <div class="aura-draw-phrase">
+      <p class="aura-draw-top">In a</p>
+
+      <div class="aura-draw-circle">
+        <p class="aura-draw-main">HOSTEL</p>
+      </div>
+
+      <p class="aura-draw-bottom">future</p>
+    </div>
+
+    <p class="aura-draw-note">
+      A future of solitude, and quiet end to the day.
+    </p>
+  </article>
+
+  <article class="aura-draw-card emotion-card">
+    <p class="aura-draw-label">EMOTION</p>
+
+    <div class="aura-draw-phrase">
+      <p class="aura-draw-top">A state of</p>
+
+      <div class="aura-draw-circle">
+        <p class="aura-draw-main">NUMBNESS</p>
+      </div>
+    </div>
+
+    <p class="aura-draw-note">
+      The user does not want diagnosis, only a gentle way to pause.
+    </p>
+  </article>
+
+  <article class="aura-draw-card trigger-card">
+    <p class="aura-draw-label">TRIGGER</p>
+
+    <div class="aura-draw-phrase">
+      <p class="aura-draw-top">Shaped by</p>
+
+      <div class="aura-draw-circle">
+        <p class="aura-draw-main">SELF-DOUBT</p>
+      </div>
+    </div>
+
+    <p class="aura-draw-note">
+      Academic pressure, and the feeling of not being enough.
+    </p>
+  </article>
+
+  <article class="aura-draw-card ritual-card">
+    <p class="aura-draw-label">RITUAL</p>
+
+    <div class="aura-draw-phrase">
+      <p class="aura-draw-top">Marked by</p>
+
+      <div class="aura-draw-circle">
+        <p class="aura-draw-main">DIYA (Lamp)</p>
+      </div>
+    </div>
+
+    <p class="aura-draw-note">
+      A domestic ritual object used to mark closure, stillness, and intention.
+    </p>
+  </article>
+
+  <article class="aura-draw-card modality-card">
+    <p class="aura-draw-label">MODALITY</p>
+
+    <div class="aura-draw-phrase">
+      <p class="aura-draw-top">Through</p>
+
+      <div class="aura-draw-circle">
+        <p class="aura-draw-main">LIGHT + SCENT</p>
+      </div>
+    </div>
+
+    <p class="aura-draw-note">
+      Warm light and soft olfactory cues create an ambient response.
+    </p>
+  </article>
+
+</section>
+
+<p class="aura-card-method-caption">
+  Futuring card method adapted from Ceylan Beşevli et al.’s SONARIOS paper, using card combinations to generate speculative interaction scenarios.
+</p>
+
       <p>
-        Write about methods, workshops, sketches, prototyping, or research process here.
+        The idea: a lamp you light at the end of a bad day. It never asks how you feel. Lighting it is the message, the day is over. Warm light rises, a faint sandalwood follows, then it dims itself.
       </p>
 
       <blockquote>
-        Optional highlighted quote, insight, or participant reflection can go here.
+        Not to cheer you up. To give permission to stop.
       </blockquote>
 
-      <img src="../assets/images/projects/p01-02.png" alt="Project process image">
-
-      <h2>Outcome</h2>
       <p>
-        Write about the final outcome, prototype, system, or learning here.
+        That one draw seeded both scenarios, and the hypothesis below.
       </p>
+
+      <h2>What the workshop showed</h2>
+
+      <p>
+        Two themes carried the most weight, so they became the scenarios.
+      </p>
+
+      <div class="aura-theme-grid">
+        <div>
+          <span>THEME 01</span>
+          <h3>The Pause Before Response</h3>
+          <p>
+            A gap between trigger and reaction. The logic of mauna, of sandhya.
+          </p>
+        </div>
+
+        <div>
+          <span>THEME 02</span>
+          <h3>Closing, Not Fixing</h3>
+          <p>
+            Marking an end, not inducing a feeling. The logic of the diya, of raga samay, ragas bound to the hours.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        What struck me: the rituals were mine, but their logic travelled. Most of the room did not practise them. They engaged anyway.
+      </p>
+
+      <blockquote>
+        "I don't do this at home. But ending the day on purpose, that I'd use."
+      </blockquote>
+
+      <p>
+        And the thing I did not expect: every group recoiled when a scenario labelled the mood. One person, mid-exercise, said:
+      </p>
+
+      <blockquote>
+        "Don't tell me it's sad. Just let me light it."
+      </blockquote>
+
+      <p>
+        So the hypothesis: the interface should stay unnamed. Do not classify the mood. Do not title the scent. Do not narrate. In scent, silence may be the mechanism, not a missing feature.
+      </p>
+
+      <p>
+        A risk it raises: smell is personal. A "calming" sandalwood is, for someone, the smell of a funeral. So the user picks the scent. The system never assigns it.
+      </p>
+
+      <h2>Two scenarios</h2>
+
+      <div class="aura-scenario-stack">
+        <div class="aura-scenario-card">
+          <span>SCENARIO 01</span>
+          <h3>The Pause</h3>
+
+          <p>
+            Back from a hard call. One tap, wet mitti scent, warm light, mist in short pulses. Nothing labelled, nothing notified. Ten minutes before you face anyone.
+          </p>
+
+          <p class="aura-scenario-note">
+            Buildable now. The catch is latency, smell lingers, so timing a pause is harder than timing a light.
+          </p>
+        </div>
+
+        <div class="aura-scenario-card">
+          <span>SCENARIO 02</span>
+          <h3>The Evening Raga</h3>
+
+          <p>
+            Fourth night of exam week. The app reads rhythm, never mood: focus mode, every night, past midnight. At dusk it offers to close the day. Light dims, mist slows, scent shifts citrus to sandalwood. One question: continue, or pause?
+          </p>
+
+          <p class="aura-scenario-note">
+            Buildable now on the digital side. The hard part is the mapping, which scent, which hour.
+          </p>
+        </div>
+      </div>
+
+      <blockquote>
+        The system never infers your emotion. You choose; it nudges from time and use.
+      </blockquote>
 
     </article>
 
+    <!-- INLINE CAROUSEL 02 -->
+    <section
+      class="project-carousel project-inline-carousel"
+      data-images="../assets/images/projects/p02-4.png|../assets/images/projects/p02-1.png|../assets/images/projects/p02-7.png"
+      data-fit="contain|contain|contain"
+      data-captions="The Pause imagines scent and light as a transition before response.|The Evening Raga uses time and routine instead of inferred emotion.|Aura Mist asks whether ambient interaction can make room for a mood without fixing it."
+    >
+      <p class="project-carousel-label">SCENARIOS / ATMOSPHERE / SILENCE</p>
+
+      <div class="project-carousel-frame">
+        <img
+          class="project-carousel-image"
+          src="../assets/images/projects/aura-pause.jpg"
+          alt="Aura Mist scenario visual"
+        >
+
+        <p class="project-carousel-caption"></p>
+
+        <button class="project-carousel-prev" type="button" aria-label="Previous image">←</button>
+        <button class="project-carousel-next" type="button" aria-label="Next image">→</button>
+      </div>
+
+      <div class="project-carousel-footer">
+        <div class="project-carousel-dots"></div>
+
+        <p class="project-carousel-count">
+          <span class="project-carousel-current">01</span> /
+          <span class="project-carousel-total">03</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- BODY BLOCK 03 -->
+    <article class="project-detail-body">
+
+      <h2>The honest question</h2>
+
+      <p>
+        The research itself is the warning. People numb with tobacco and alcohol. They snap at the people they love. Same move, changing your state to dodge a feeling, gone wrong.
+      </p>
+
+      <p>
+        So does an atmosphere device help you transition, or just help you avoid? I do not know. That is the deeper question, and it needs a longer study than I have run.
+      </p>
+
+      <blockquote>
+        "Close the day, don't escape it" is an intention, not a result.
+      </blockquote>
+
+      <h2>What I learned</h2>
+
+      <ul>
+        <li>
+          <strong>Unnamed may beat legible.</strong>
+          The least obvious thing here, and the first I would test.
+        </li>
+
+        <li>
+          <strong>The rituals are borrowed from my background, not the participants'.</strong>
+          The workshop did not endorse the use of tradition, but tested whether their logic travels.
+        </li>
+
+        <li>
+          <strong>The samples are formative.</strong>
+          150 self-reports and nine students give direction, not proof. It was purposive sampling at IIT Roorkee, India.
+        </li>
+
+        <li>
+          <strong>Scent is the bet and the bottleneck.</strong>
+          Latency, lingering, personal meaning and shared air all remain hard problems.
+        </li>
+      </ul>
+
+      <h2>Where it points</h2>
+
+      <p>
+        A step, not a result.
+      </p>
+
+      <p>
+        The next study is small, and tests the one claim I would defend: a Wizard-of-Oz of The Pause, one version that names the mood, one that stays silent, and which one people come back to. I would watch hard for the demand effects a faked device invites.
+      </p>
+
+      <blockquote>
+        Aura Mist is not trying to fix a mood. It is trying to make room for one, and to know which claim it can stand behind.
+      </blockquote>
+
+    </article>
+
+    <!-- PROJECT PAGE END NAVIGATION -->
+    <section class="project-end-nav">
+      <a class="project-back-link" href="../index.html#projects">← BACK TO PROJECTS</a>
+
+      <a class="project-top-link" href="#top">GO BACK TO TOP ↑</a>
+
+      <a class="project-next-link" href="#">NEXT PROJECT →</a>
+    </section>
+
   </main>
 
-  <script>
-    const galleryImage = document.querySelector(".project-detail-image");
-    const prevBtn = document.querySelector(".project-detail-prev");
-    const nextBtn = document.querySelector(".project-detail-next");
-    const dotsWrap = document.querySelector(".project-detail-dots");
-    const currentText = document.querySelector(".project-current");
-    const totalText = document.querySelector(".project-total");
+  <footer class="detail-footer">
+    <p>© 2026 — J. Rautela</p>
 
-    if (galleryImage) {
-      const images = galleryImage.dataset.images.split("|");
+    <p>
+      built and coded by myself.
+      <a href="../privacy.html">privacy</a>
+    </p>
+  </footer>
+
+  <script>
+    const carousels = document.querySelectorAll(".project-carousel");
+
+    carousels.forEach((carousel) => {
+      const image = carousel.querySelector(".project-carousel-image");
+      const prevBtn = carousel.querySelector(".project-carousel-prev");
+      const nextBtn = carousel.querySelector(".project-carousel-next");
+      const dotsWrap = carousel.querySelector(".project-carousel-dots");
+      const currentText = carousel.querySelector(".project-carousel-current");
+      const totalText = carousel.querySelector(".project-carousel-total");
+      const captionText = carousel.querySelector(".project-carousel-caption");
+
+      if (!image || !prevBtn || !nextBtn || !dotsWrap || !currentText || !totalText) return;
+
+      const images = carousel.dataset.images
+        .split("|")
+        .map((item) => item.trim())
+        .filter(Boolean);
+
+      const captions = carousel.dataset.captions
+        ? carousel.dataset.captions.split("|").map((item) => item.trim())
+        : [];
+
+      const fitModes = carousel.dataset.fit
+        ? carousel.dataset.fit.split("|").map((item) => item.trim())
+        : [];
+
       let currentIndex = 0;
 
-      totalText.textContent = String(images.length).padStart(2, "0");
+      dotsWrap.innerHTML = "";
 
       images.forEach((_, index) => {
         const dot = document.createElement("button");
         dot.type = "button";
+        dot.setAttribute("aria-label", `Go to image ${index + 1}`);
 
         if (index === 0) dot.classList.add("is-active");
 
         dot.addEventListener("click", () => {
-          updateGallery(index);
+          updateCarousel(index);
         });
 
         dotsWrap.appendChild(dot);
@@ -145,11 +597,24 @@
 
       const dots = dotsWrap.querySelectorAll("button");
 
-      function updateGallery(index) {
+      function updateCarousel(index) {
         currentIndex = index;
-        galleryImage.src = images[currentIndex];
+
+        image.src = images[currentIndex];
+
+        image.classList.toggle(
+          "is-contain",
+          fitModes[currentIndex] === "contain"
+        );
 
         currentText.textContent = String(currentIndex + 1).padStart(2, "0");
+        totalText.textContent = String(images.length).padStart(2, "0");
+
+        if (captionText) {
+          const caption = captions[currentIndex] || "";
+          captionText.textContent = caption;
+          captionText.style.display = caption ? "block" : "none";
+        }
 
         dots.forEach((dot) => dot.classList.remove("is-active"));
         dots[currentIndex].classList.add("is-active");
@@ -157,17 +622,20 @@
 
       prevBtn.addEventListener("click", () => {
         const nextIndex = (currentIndex - 1 + images.length) % images.length;
-        updateGallery(nextIndex);
+        updateCarousel(nextIndex);
       });
 
       nextBtn.addEventListener("click", () => {
         const nextIndex = (currentIndex + 1) % images.length;
-        updateGallery(nextIndex);
+        updateCarousel(nextIndex);
       });
-    }
+
+      updateCarousel(0);
+    });
   </script>
 
-<script src="../shared.js"></script>
+  <script src="../shared.js"></script>
+  <script src="../script.js"></script>
 
 </body>
 </html>
