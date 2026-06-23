@@ -4370,3 +4370,221 @@ body {
   margin-bottom: 28px;
   padding-left: 0.2rem;
 }
+
+/* =========================================
+   RETRO WALK PROJECT PAGE
+   research-driven wearable HCI layout
+========================================= */
+
+.retro-walk-page {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.retro-walk-page .project-detail-title {
+  max-width: 760px;
+}
+
+.retro-walk-page .project-detail-summary {
+  max-width: 720px;
+}
+
+.retro-opening-line {
+  margin: 0 0 52px;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(56px, 5.5vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: var(--cream);
+}
+
+/* arrow-like system flow */
+.retro-arrow-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 38px 0 46px;
+}
+
+.retro-arrow-step {
+  position: relative;
+  min-height: 122px;
+  padding: 22px 18px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.035);
+}
+
+.retro-arrow-step::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -13px;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+}
+
+.retro-arrow-step:last-child::after {
+  display: none;
+}
+
+.retro-arrow-step span,
+.retro-stage-grid span,
+.retro-mini-grid span {
+  display: block;
+  margin-bottom: 22px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.retro-arrow-step p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--cream);
+}
+
+/* built / proposed / future cards */
+.retro-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 38px 0 46px;
+}
+
+.retro-stage-grid div {
+  padding: 24px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.035);
+}
+
+.retro-stage-grid h3 {
+  margin: 0 0 14px;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--cream);
+}
+
+.retro-stage-grid p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(243, 234, 217, 0.76);
+}
+
+/* compact app logic grid */
+.retro-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 36px 0 48px;
+}
+
+.retro-mini-grid div {
+  min-height: 110px;
+  padding: 18px 16px;
+  border-left: 1px solid var(--orange);
+  background: rgba(243, 234, 217, 0.025);
+}
+
+.retro-mini-grid span {
+  margin-bottom: 18px;
+}
+
+.retro-mini-grid p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.18;
+  color: var(--cream);
+}
+
+/* mobile */
+@media (max-width: 900px) {
+  .retro-arrow-flow,
+  .retro-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .retro-arrow-step::after {
+    content: "↓";
+    top: auto;
+    right: auto;
+    left: 18px;
+    bottom: -22px;
+    transform: none;
+  }
+
+  .retro-stage-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-detail-body .retro-opening-line {
+    margin-bottom: 38px;
+    font-size: clamp(36px, 11vw, 54px);
+    line-height: 0.98;
+  }
+
+  .retro-arrow-step {
+    min-height: auto;
+  }
+
+  .retro-arrow-step p {
+    font-size: 20px;
+  }
+
+  .retro-stage-grid div {
+    padding: 22px;
+  }
+
+  .retro-stage-grid h3 {
+    font-size: 21px;
+  }
+
+  .retro-stage-grid p,
+  .retro-mini-grid p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+}
+
+.project-detail-body .retro-opening-line {
+  margin: 0 0 58px;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(28px, 3vw, 64px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  color: var(--cream);
+}

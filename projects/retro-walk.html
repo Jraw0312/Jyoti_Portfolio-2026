@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>PROJECT TITLE - Jyoti Rautela</title>
+  <title>Retro Walk - Jyoti Rautela</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg?v=2" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 
-<body class="project-detail-page" id="top">
+<body class="project-detail-page retro-walk-page" id="top">
 
   <header class="nav">
     <div class="brand">
@@ -45,18 +45,20 @@
 
     <a class="project-detail-back" href="../index.html#projects">← BACK TO PROJECTS</a>
 
-    <!-- TOP PROJECT CAROUSEL -->
+    <!-- HERO CAROUSEL -->
     <section
       class="project-carousel project-hero-carousel"
-      data-images="../assets/images/projects/sample-01.png|../assets/images/projects/sample-02.png"
-      data-fit="cover|contain"
-      data-captions="Sample caption for image one|Sample caption for image two"
+      data-images="../assets/images/projects/retro-01.png|../assets/images/projects/retro-research.png|../assets/images/projects/retro-spec.png"
+      data-fit="cover|contain|contain"
+      data-captions="Retro Walk treats footwear as a wearable sensing surface for ageing mobility.|The project began from gait, posture, pressure distribution, and fall-prevention research.|The prototype explored load-sensing insoles, BLE transfer, and app-based corrective guidance."
     >
+      <p class="project-carousel-label">RETRO WALK / WEARABLE HCI / 2024</p>
+
       <div class="project-carousel-frame">
         <img
           class="project-carousel-image"
-          src="../assets/images/projects/sample-01.png"
-          alt="PROJECT TITLE sample image"
+          src="../assets/images/projects/retro-01.png"
+          alt="Retro Walk smart footwear concept"
         >
 
         <p class="project-carousel-caption"></p>
@@ -70,70 +72,391 @@
 
         <p class="project-carousel-count">
           <span class="project-carousel-current">01</span> /
-          <span class="project-carousel-total">02</span>
+          <span class="project-carousel-total">03</span>
         </p>
       </div>
     </section>
 
-    <!-- PROJECT INTRO -->
+    <!-- INTRO -->
     <section class="project-detail-intro">
       <p class="project-detail-status">
         <span>● ARCHIVED</span>
-        <span>YEAR / DURATION</span>
+        <span>WEARABLE HCI</span>
+        <span>BENETTON R&D PROJECT</span>
       </p>
 
       <h1 class="project-detail-title">
-        PROJECT TITLE
+        Retro Walk
       </h1>
 
       <p class="project-detail-summary">
-        One or two lines about the project. Write what the project explores, who it is for, and why it matters.
+        A smart footwear prototype for reading pressure imbalance, supporting gait correction, and rethinking assistive technology as something people would still want to wear.
       </p>
 
       <div class="project-detail-info">
-        <p>ROLE</p>
-        <span>YOUR ROLE · METHOD · OUTPUT</span>
+        <p>FOCUS</p>
+        <span>Ageing Mobility · Fall Prevention · Assistive Wearables</span>
+      </div>
+
+      <div class="project-detail-info">
+        <p>METHODS</p>
+        <span>Semi-structured Interviews · Ethnography · Sketching · CAD · Arduino Prototyping · User Feedback</span>
+      </div>
+
+      <div class="project-detail-info">
+        <p>PROTOTYPE</p>
+        <span>Load-sensing insole · Arduino circuit · BLE direction · App screens · Footwear body</span>
       </div>
 
       <div class="project-detail-tags">
-        <span>TAG 1</span>
-        <span>TAG 2</span>
-        <span>TAG 3</span>
+        <span>SMART INSOLE</span>
+        <span>GAIT FEEDBACK</span>
+        <span>ELDERLY CARE</span>
+        <span>WEARABLE INTERACTION</span>
+        <span>ASSISTIVE TECH</span>
       </div>
     </section>
 
-    <!-- PROJECT BODY -->
+    <!-- BODY BLOCK 01 -->
     <article class="project-detail-body">
 
-      <h2>Project question</h2>
-
-      <p>
-        Write one or two lines about the main question behind this project.
+      <p class="retro-opening-line">
+        Can an everyday shoe notice pressure shifts before they become a fall?
       </p>
 
-      <h2>What I explored</h2>
-
       <p>
-        Write one or two lines about the research, process, prototype, or design direction.
+        Retro Walk began as a footwear project, but I treated the shoe less as a product and more as a sensing surface.
       </p>
 
-      <ul>
-        <li><strong>Method 1</strong> Write one short line about the method or process.</li>
-        <li><strong>Method 2</strong> Write one short line about the method or process.</li>
-        <li><strong>Output</strong> Write one short line about what came out of the project.</li>
-      </ul>
+      <p>
+        The question was simple: if imbalance starts as small changes in posture, pressure, and walking confidence, can a wearable catch those changes early enough to support correction?
+      </p>
 
       <blockquote>
-        Add one short project insight, reflection, or quote here.
+        Not a medical device. A research prototype for noticing the body before the body fails loudly.
+      </blockquote>
+
+      <h2>The problem</h2>
+
+      <ul class="project-bullets">
+        <li>
+          Falls in older adults are often treated as sudden events, but the warning signs can build slowly through gait, posture, and pressure imbalance.
+        </li>
+
+        <li>
+          People may not notice when they begin loading one side of the foot more than the other.
+        </li>
+
+        <li>
+          Clinical gait tools are useful, but they are not always available inside everyday routines.
+        </li>
+
+        <li>
+          Most technical footwear looks technical first and wearable second. I wanted to challenge that.
+        </li>
+      </ul>
+
+      <h2>The research direction</h2>
+
+      <p>
+        I focused on ageing mobility across elders and active adults, with caregivers, occupational therapists, and family members as secondary stakeholders.
+      </p>
+
+      <div class="retro-arrow-flow">
+        <div class="retro-arrow-step">
+          <span>01</span>
+          <p>Ageing body</p>
+        </div>
+
+        <div class="retro-arrow-step">
+          <span>02</span>
+          <p>Postural shift</p>
+        </div>
+
+        <div class="retro-arrow-step">
+          <span>03</span>
+          <p>Pressure imbalance</p>
+        </div>
+
+        <div class="retro-arrow-step">
+          <span>04</span>
+          <p>Corrective feedback</p>
+        </div>
+
+        <div class="retro-arrow-step">
+          <span>05</span>
+          <p>Safer walking practice</p>
+        </div>
+      </div>
+
+      <p>
+        The project was also personal. I had seen elderly people around me struggle with standing for long periods, body ache, reduced mobility, and the difficulty of finding products that felt useful without looking like medical equipment.
+      </p>
+
+    </article>
+
+    <!-- INLINE CAROUSEL 01 -->
+    <section
+      class="project-carousel project-inline-carousel"
+      data-images="../assets/images/projects/retro-research.png|../assets/images/projects/retro-persona.png|../assets/images/projects/retro-brainstorm.png"
+      data-fit="contain|contain|contain"
+      data-captions="Research mapped ageing mobility, posture change, fall risk, and pressure distribution.|The primary users were elders and active adults; secondary users included caregivers and therapists.|Sketching helped move from medical-looking devices toward wearable footwear language."
+    >
+      <p class="project-carousel-label">RESEARCH / USERS / EARLY FORM</p>
+
+      <div class="project-carousel-frame">
+        <img
+          class="project-carousel-image"
+          src="../assets/images/projects/retro-research.png"
+          alt="Retro Walk research and user slides"
+        >
+
+        <p class="project-carousel-caption"></p>
+
+        <button class="project-carousel-prev" type="button" aria-label="Previous image">←</button>
+        <button class="project-carousel-next" type="button" aria-label="Next image">→</button>
+      </div>
+
+      <div class="project-carousel-footer">
+        <div class="project-carousel-dots"></div>
+
+        <p class="project-carousel-count">
+          <span class="project-carousel-current">01</span> /
+          <span class="project-carousel-total">03</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- BODY BLOCK 02 -->
+    <article class="project-detail-body">
+
+      <h2>What I built</h2>
+
+      <p>
+        The working prototype explored how pressure could be sensed through the insole, then translated into a readable feedback loop.
+      </p>
+
+      <div class="retro-stage-grid">
+        <div>
+          <span>BUILT</span>
+          <h3>Load-sensing insole</h3>
+          <p>
+            An insole direction with embedded load-sensing points to capture pressure shifts during standing and walking.
+          </p>
+        </div>
+
+        <div>
+          <span>BUILT</span>
+          <h3>Arduino circuit</h3>
+          <p>
+            A low-fidelity circuit prototype to test whether pressure readings could be captured from the footwear base.
+          </p>
+        </div>
+
+        <div>
+          <span>PROPOSED</span>
+          <h3>BLE + app layer</h3>
+          <p>
+            A mobile interface that receives walking data, shows pressure patterns, and gives corrective guidance.
+          </p>
+        </div>
+
+        <div>
+          <span>FUTURE</span>
+          <h3>ML comparison model</h3>
+          <p>
+            A later layer that compares user pressure distribution with healthier medial-lateral loading patterns.
+          </p>
+        </div>
+      </div>
+
+      <blockquote>
+        The prototype collected a direction. The intelligence layer was the next stage, not a finished claim.
+      </blockquote>
+
+      <h2>System logic</h2>
+
+      <p>
+        The intended interaction was short and repeatable: walk, read, correct, repeat.
+      </p>
+
+      <ul class="project-bullets">
+        <li>
+          The user stands and walks for a short trial, around 50 metres, to create an initial pressure profile.
+        </li>
+
+        <li>
+          The insole reads how pressure is distributed across the foot, especially medial and lateral loading.
+        </li>
+
+        <li>
+          The app compares this pattern with a healthier pressure-distribution model.
+        </li>
+
+        <li>
+          During practice, the user receives simple audio, haptic, and visual cues if pressure shifts too strongly to one side.
+        </li>
+
+        <li>
+          Progress is shown through charts, tutorials, and corrective walking exercises.
+        </li>
+      </ul>
+
+      <h2>The interface idea</h2>
+
+      <p>
+        I did not want the app to scare the user with diagnosis. The interface had to behave more like a coach than a warning label.
+      </p>
+
+      <div class="retro-mini-grid">
+        <div>
+          <span>READ</span>
+          <p>Pressure map</p>
+        </div>
+
+        <div>
+          <span>NOTICE</span>
+          <p>Medial-lateral shift</p>
+        </div>
+
+        <div>
+          <span>GUIDE</span>
+          <p>Audio + haptic cue</p>
+        </div>
+
+        <div>
+          <span>PRACTISE</span>
+          <p>Tutorial movement</p>
+        </div>
+
+        <div>
+          <span>TRACK</span>
+          <p>Progress chart</p>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- INLINE CAROUSEL 02 -->
+    <section
+      class="project-carousel project-inline-carousel"
+      data-images="../assets/images/projects/retro-flowchart.png|../assets/images/projects/retro-cmf.png|../assets/images/projects/retro-spec.png"
+      data-fit="contain|contain|contain"
+      data-captions="The system flow connected sensing, Bluetooth transfer, app analysis, and corrective feedback.|CMF exploration helped keep the technical layer embedded inside a believable footwear language.|The specification slide placed the sensing and electronics inside an exploded footwear structure."
+    >
+      <p class="project-carousel-label">SYSTEM / CMF / SPECIFICATION</p>
+
+      <div class="project-carousel-frame">
+        <img
+          class="project-carousel-image"
+          src="../assets/images/projects/retro-flowchart.png"
+          alt="Retro Walk system flowchart and specification"
+        >
+
+        <p class="project-carousel-caption"></p>
+
+        <button class="project-carousel-prev" type="button" aria-label="Previous image">←</button>
+        <button class="project-carousel-next" type="button" aria-label="Next image">→</button>
+      </div>
+
+      <div class="project-carousel-footer">
+        <div class="project-carousel-dots"></div>
+
+        <p class="project-carousel-count">
+          <span class="project-carousel-current">01</span> /
+          <span class="project-carousel-total">03</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- BODY BLOCK 03 -->
+    <article class="project-detail-body">
+
+      <h2>The technical frame</h2>
+
+      <p>
+        The project sits in the same technical family as smart insoles used for gait and plantar-pressure monitoring.
+      </p>
+
+      <ul class="project-bullets">
+        <li>
+          <strong>Pressure distribution</strong> became the main signal, not step count alone.
+        </li>
+
+        <li>
+          <strong>Medial-lateral loading</strong> helped frame whether the body was overloading one side of the foot.
+        </li>
+
+        <li>
+          <strong>Centre of pressure shift</strong> became a useful future metric for identifying unstable walking patterns.
+        </li>
+
+        <li>
+          <strong>Feedback timing</strong> mattered because real-time correction can become annoying if it is too frequent.
+        </li>
+      </ul>
+
+      <h2>What I learned</h2>
+
+      <ul class="project-bullets">
+        <li>
+          A healthcare wearable cannot only be technically correct. It also has to feel socially wearable.
+        </li>
+
+        <li>
+          The moment sensors enter footwear, the form can quickly start looking like an experiment. I wanted the technology to disappear into a normal shoe.
+        </li>
+
+        <li>
+          Early diagnosis is not only a data problem. It is also a trust, comfort, and habit problem.
+        </li>
+
+        <li>
+          Feedback for elders has to be calm. Too much warning can reduce confidence instead of supporting movement.
+        </li>
+      </ul>
+
+      <h2>Limits</h2>
+
+      <p>
+        Retro Walk was a concept prototype. It was not clinically validated, and the user feedback was on the idea and direction, not on long-term use of the working product.
+      </p>
+
+      <p>
+        The ML model and fuller app screens are the next stage: longer walking trials, a larger pressure dataset, therapist input, and a more careful comparison model.
+      </p>
+
+      <blockquote>
+        The value of the project was not that the shoe solved fall prevention. It showed how a familiar object could become an early conversation with the body.
       </blockquote>
 
       <h2>Where it points</h2>
 
       <p>
-        Write one or two lines about what this project taught you or where it could go next.
+        Retro Walk points toward assistive footwear that does not announce itself as assistive. A shoe that can support gait awareness, home-based mobility practice, and early pressure-pattern screening without turning the user into a patient first.
       </p>
 
     </article>
+
+    <section class="project-further-reading">
+  <h2>Further reading</h2>
+
+  <ul>
+    <li>
+      <a href="https://www.behance.net/gallery/210142815/Industrial-Design-Portfolio" target="_blank" rel="noopener noreferrer">
+        Retro Walk project deck
+      </a>
+      <span> — full process deck, research, system flow, prototype and app direction.</span>
+    </li>
+
+    <li>
+      <a href="../writing/retro-walk.html" target="_blank" rel="noopener noreferrer">
+        Notes on Retro Walk
+      </a>
+      <span> — a short writing piece on ageing mobility, smart footwear, and wearable assistive technology.</span>
+    </li>
+  </ul>
+</section>
 
     <!-- PROJECT PAGE END NAVIGATION -->
     <section class="project-end-nav">
@@ -154,90 +477,6 @@
       <a href="../privacy.html">privacy</a>
     </p>
   </footer>
-
-  <script>
-    const carousels = document.querySelectorAll(".project-carousel");
-
-    carousels.forEach((carousel) => {
-      const image = carousel.querySelector(".project-carousel-image");
-      const prevBtn = carousel.querySelector(".project-carousel-prev");
-      const nextBtn = carousel.querySelector(".project-carousel-next");
-      const dotsWrap = carousel.querySelector(".project-carousel-dots");
-      const currentText = carousel.querySelector(".project-carousel-current");
-      const totalText = carousel.querySelector(".project-carousel-total");
-      const captionText = carousel.querySelector(".project-carousel-caption");
-
-      if (!image || !prevBtn || !nextBtn || !dotsWrap || !currentText || !totalText) return;
-
-      const images = carousel.dataset.images
-        .split("|")
-        .map((item) => item.trim())
-        .filter(Boolean);
-
-      const captions = carousel.dataset.captions
-        ? carousel.dataset.captions.split("|").map((item) => item.trim())
-        : [];
-
-      const fitModes = carousel.dataset.fit
-        ? carousel.dataset.fit.split("|").map((item) => item.trim())
-        : [];
-
-      let currentIndex = 0;
-
-      dotsWrap.innerHTML = "";
-
-      images.forEach((_, index) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.setAttribute("aria-label", `Go to image ${index + 1}`);
-
-        if (index === 0) dot.classList.add("is-active");
-
-        dot.addEventListener("click", () => {
-          updateCarousel(index);
-        });
-
-        dotsWrap.appendChild(dot);
-      });
-
-      const dots = dotsWrap.querySelectorAll("button");
-
-      function updateCarousel(index) {
-        currentIndex = index;
-
-        image.src = images[currentIndex];
-
-        image.classList.toggle(
-          "is-contain",
-          fitModes[currentIndex] === "contain"
-        );
-
-        currentText.textContent = String(currentIndex + 1).padStart(2, "0");
-        totalText.textContent = String(images.length).padStart(2, "0");
-
-        if (captionText) {
-          const caption = captions[currentIndex] || "";
-          captionText.textContent = caption;
-          captionText.style.display = caption ? "block" : "none";
-        }
-
-        dots.forEach((dot) => dot.classList.remove("is-active"));
-        dots[currentIndex].classList.add("is-active");
-      }
-
-      prevBtn.addEventListener("click", () => {
-        const nextIndex = (currentIndex - 1 + images.length) % images.length;
-        updateCarousel(nextIndex);
-      });
-
-      nextBtn.addEventListener("click", () => {
-        const nextIndex = (currentIndex + 1) % images.length;
-        updateCarousel(nextIndex);
-      });
-
-      updateCarousel(0);
-    });
-  </script>
 
   <script src="../shared.js"></script>
   <script src="../script.js"></script>
