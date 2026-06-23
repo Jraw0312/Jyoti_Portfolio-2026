@@ -4588,3 +4588,7 @@ body {
   letter-spacing: -0.055em;
   color: var(--cream);
 }
+
+.publication-row[hidden] {
+  display: none !important;
+}
