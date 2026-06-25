@@ -354,7 +354,7 @@ const projectSequence = [
   "assistive-mobility.html",
   "aura-mist.html",
   "retro-walk.html",
-  "neomind.html",
+  "hfd-iitb.html",
   "office-mood.html",
   "participatory-booklet.html",
   "expandable-wheel.html",

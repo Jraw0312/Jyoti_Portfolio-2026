@@ -4592,3 +4592,361 @@ body {
 .publication-row[hidden] {
   display: none !important;
 }
+
+/* =========================================
+   HFD IITB / KOCHI WATER METRO PROJECT PAGE
+   graduate research internship layout
+========================================= */
+
+.hfd-iitb-page {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.hfd-iitb-page .project-detail-title {
+  max-width: 760px;
+}
+
+.hfd-iitb-page .project-detail-summary {
+  max-width: 720px;
+}
+
+.project-detail-body .hfd-opening-line {
+  margin: 0 0 58px;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(34px, 4vw, 68px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  color: var(--cream);
+}
+
+/* Field + method grid */
+.hfd-field-grid,
+.hfd-framework-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 38px 0 46px;
+}
+
+.hfd-field-grid div,
+.hfd-framework-grid article {
+  padding: 24px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.035);
+}
+
+.hfd-field-grid span,
+.hfd-framework-grid span,
+.hfd-allocation-flow span,
+.hfd-dashboard-grid span,
+.hfd-evaluation-stack span {
+  display: block;
+  margin-bottom: 22px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.hfd-field-grid h3,
+.hfd-framework-grid h3 {
+  margin: 0 0 14px;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--cream);
+}
+
+.hfd-field-grid p,
+.hfd-framework-grid p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(243, 234, 217, 0.76);
+}
+
+/* Physical / digital / mirrored allocation */
+.hfd-allocation-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 38px 0 48px;
+}
+
+.hfd-allocation-flow div {
+  position: relative;
+  min-height: 138px;
+  padding: 24px 20px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.028);
+}
+
+.hfd-allocation-flow div::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+}
+
+.hfd-allocation-flow div:last-child::after {
+  display: none;
+}
+
+.hfd-allocation-flow p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.22;
+  color: var(--cream);
+}
+
+/* Dimensions table */
+.hfd-dimension-table {
+  width: 100%;
+  margin: 42px 0 54px;
+  border-collapse: collapse;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.025);
+}
+
+.hfd-dimension-table th,
+.hfd-dimension-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(243, 234, 217, 0.12);
+  text-align: left;
+}
+
+.hfd-dimension-table th {
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hfd-dimension-table td {
+  color: rgba(243, 234, 217, 0.82);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.hfd-dimension-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Dashboard small cards */
+.hfd-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 36px 0 48px;
+}
+
+.hfd-dashboard-grid div {
+  min-height: 128px;
+  padding: 18px 16px;
+  border-left: 1px solid var(--orange);
+  background: rgba(243, 234, 217, 0.025);
+}
+
+.hfd-dashboard-grid span {
+  margin-bottom: 18px;
+}
+
+.hfd-dashboard-grid p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--cream);
+}
+
+/* Evaluation stack */
+.hfd-evaluation-stack {
+  display: grid;
+  gap: 18px;
+  margin: 38px 0 48px;
+}
+
+.hfd-evaluation-stack div {
+  padding: 24px 26px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.035);
+}
+
+.hfd-evaluation-stack span {
+  margin-bottom: 14px;
+}
+
+.hfd-evaluation-stack p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.58;
+  color: rgba(243, 234, 217, 0.78);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hfd-field-grid,
+  .hfd-framework-grid,
+  .hfd-allocation-flow,
+  .hfd-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hfd-allocation-flow div::after {
+    content: "↓";
+    top: auto;
+    right: auto;
+    left: 18px;
+    bottom: -22px;
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-detail-body .hfd-opening-line {
+    margin-bottom: 38px;
+    font-size: clamp(34px, 10vw, 52px);
+    line-height: 0.98;
+  }
+
+  .hfd-field-grid div,
+  .hfd-framework-grid article,
+  .hfd-evaluation-stack div {
+    padding: 22px;
+  }
+
+  .hfd-field-grid h3,
+  .hfd-framework-grid h3 {
+    font-size: 21px;
+  }
+
+  .hfd-field-grid p,
+  .hfd-framework-grid p,
+  .hfd-evaluation-stack p,
+  .hfd-dashboard-grid p,
+  .hfd-allocation-flow p,
+  .hfd-dimension-table td {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .hfd-dimension-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .hfd-dimension-table th,
+  .hfd-dimension-table td {
+    min-width: 150px;
+  }
+}
+
+.hfd-method-note {
+  margin: -16px 0 54px;
+  padding-left: 22px;
+  border-left: 1px solid var(--orange);
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: rgba(243, 234, 217, 0.72);
+}
+
+.hfd-method-note a {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 78, 23, 0.8);
+}
+
+.hfd-method-note a:hover {
+  color: var(--cream);
+  border-bottom-color: var(--cream);
+}
+
+.project-video-caption {
+  margin: 22px auto 0;
+  max-width: 680px;
+  text-align: center;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 2.05;
+  color: rgba(243, 234, 217, 0.72);
+}
+
+.project-video-link {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 78, 23, 0.8);
+}
+
+.project-video-link:hover {
+  color: var(--cream);
+  border-bottom-color: var(--cream);
+}
+
+.project-context-note {
+  margin: 46px auto 72px;
+  max-width: 720px;
+  padding: 24px 28px;
+
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  border-left: 1px solid var(--orange);
+  background: rgba(243, 234, 217, 0.035);
+}
+
+.project-context-note p {
+  margin: 0;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(243, 234, 217, 0.76);
+}
+
+.project-context-note p + p {
+  margin-top: 12px;
+}
+
+.project-context-note strong {
+  color: var(--cream);
+  font-weight: 400;
+}
