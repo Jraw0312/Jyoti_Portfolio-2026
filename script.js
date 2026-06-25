@@ -350,7 +350,7 @@ projectCarousels.forEach((carousel) => {
 
 /* PROJECT DETAIL NEXT PROJECT LINK */
 
-const projectSequence = [
+const normalProjectSequence = [
   "assistive-mobility.html",
   "aura-mist.html",
   "retro-walk.html",
@@ -360,6 +360,21 @@ const projectSequence = [
   "expandable-wheel.html",
   "vr-accessibility.html"
 ];
+
+const hciApplicationProjectSequence = [
+  "assistive-mobility.html",
+  "aura-mist.html",
+  "retro-walk.html",
+  "hfd-iitb.html"
+];
+
+const isHciApplication =
+  document.referrer.includes("hci-application.html") ||
+  window.location.search.includes("hci=true");
+
+const projectSequence = isHciApplication
+  ? hciApplicationProjectSequence
+  : normalProjectSequence;
 
 const nextProjectLink = document.querySelector(".project-next-link");
 
