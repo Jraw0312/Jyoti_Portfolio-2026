@@ -104,16 +104,18 @@ const extraProjects = document.querySelectorAll(".extra-project");
 let projectsExpanded = false;
 
 if (projectLoadBtn && extraProjects.length > 0) {
+  const projectsToLoad = Array.from(extraProjects).slice(0, 2);
+
   projectLoadBtn.addEventListener("click", () => {
     projectsExpanded = !projectsExpanded;
 
-    extraProjects.forEach((project) => {
+    projectsToLoad.forEach((project) => {
       project.classList.toggle("is-visible", projectsExpanded);
     });
 
     projectLoadBtn.innerHTML = projectsExpanded
       ? "LOAD LESS <span>↑</span>"
-      : "LOAD MORE <span>+4</span>";
+      : "LOAD MORE <span>+2</span>";
   });
 }
 
@@ -355,7 +357,7 @@ const normalProjectSequence = [
   "aura-mist.html",
   "retro-walk.html",
   "hfd-iitb.html",
-  "office-mood.html",
+  "connectEd.html",
   "participatory-booklet.html",
   "expandable-wheel.html",
   "vr-accessibility.html"
@@ -387,3 +389,26 @@ if (nextProjectLink) {
     nextProjectLink.href = projectSequence[nextIndex];
   }
 }
+
+/* ---- IMAGE OPTIMISATION ---- */
+
+document.querySelectorAll("img").forEach((img) => {
+  // 1. Lazy load every image
+  img.setAttribute("loading", "lazy");
+
+  // 2. Compress when image loads (skip carousel images — they swap src dynamically)
+  if (!img.closest(".project-carousel") && !img.closest(".project-image")) {
+    img.addEventListener("load", function () {
+      if (img.naturalWidth === 0) return; // skip broken images
+
+      const canvas = document.createElement("canvas");
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+
+      img.src = canvas.toDataURL("image/jpeg", 0.65); // 65% quality
+    });
+  }
+});
