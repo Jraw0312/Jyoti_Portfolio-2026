@@ -318,25 +318,9 @@ if (nextProjectLink) {
   }
 }
 
-/* ---- IMAGE OPTIMISATION ---- */
+/* ---- IMAGE LOADING ---- */
 
 document.querySelectorAll("img").forEach((img) => {
-  // 1. Lazy load every image
   img.setAttribute("loading", "lazy");
-
-  // 2. Compress when image loads (skip carousel images — they swap src dynamically)
-  if (!img.closest(".project-carousel") && !img.closest(".project-image")) {
-    img.addEventListener("load", function () {
-      if (img.naturalWidth === 0) return; // skip broken images
-
-      const canvas = document.createElement("canvas");
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-
-      const ctx = canvas.getContext("2d");
-      ctx.drawImage(img, 0, 0);
-
-      img.src = canvas.toDataURL("image/jpeg", 0.65); // 65% quality
-    });
-  }
+  img.setAttribute("decoding", "async");
 });
