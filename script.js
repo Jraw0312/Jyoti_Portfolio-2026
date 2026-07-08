@@ -16,6 +16,75 @@ if (slides.length > 0) {
   setInterval(changeSlide, 7000);
 }
 
+const layoutToggle = document.querySelector(".layout-toggle");
+const photoGrid = document.querySelector(".photo-grid");
+const loadMoreBtn = document.querySelector(".load-more-btn");
+const photoCards = Array.from(document.querySelectorAll(".photo-card"));
+const extraPhotos = Array.from(document.querySelectorAll(".extra-photo"));
+
+let photosExpanded = false;
+
+function getPhotoLimit() {
+  const isMobile = window.matchMedia("(max-width: 760px)").matches;
+  const isSmallLayout = photoGrid && photoGrid.classList.contains("grid-view");
+
+  if (isMobile && isSmallLayout) return 8;
+  if (isMobile) return 4;
+
+  return photoCards.length - extraPhotos.length;
+}
+
+function updatePhotoVisibility() {
+  const limit = getPhotoLimit();
+  const remaining = Math.max(photoCards.length - limit, 0);
+
+  photoCards.forEach((card, index) => {
+    const shouldShow = photosExpanded || index < limit;
+
+    card.classList.toggle("photo-mobile-hidden", !shouldShow);
+
+    if (card.classList.contains("extra-photo")) {
+      card.classList.toggle("is-visible", shouldShow);
+    }
+  });
+
+  if (loadMoreBtn) {
+    if (remaining <= 0) {
+      loadMoreBtn.style.display = "none";
+    } else {
+      loadMoreBtn.style.display = "inline-block";
+      loadMoreBtn.innerHTML = photosExpanded
+  ? "LOAD LESS <span>↑</span>"
+  : "LOAD MORE <span>↓</span>";
+    }
+  }
+}
+
+if (layoutToggle && photoGrid) {
+  layoutToggle.addEventListener("click", () => {
+    photoGrid.classList.toggle("grid-view");
+    layoutToggle.classList.toggle("is-active");
+
+    photosExpanded = false;
+    updatePhotoVisibility();
+  });
+}
+
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener("click", () => {
+    photosExpanded = !photosExpanded;
+    updatePhotoVisibility();
+  });
+}
+
+window.addEventListener("resize", () => {
+  photosExpanded = false;
+  updatePhotoVisibility();
+});
+
+updatePhotoVisibility();
+
+
 const writingCards = document.querySelectorAll(".writing-card");
 
 writingCards.forEach((card) => {
@@ -288,7 +357,7 @@ const normalProjectSequence = [
   "retro-walk.html",
   "hfd-iitb.html",
   "connectEd.html",
-  "neomind.html"
+  "reviving-culture.html"
 ];
 
 const hciApplicationProjectSequence = [
