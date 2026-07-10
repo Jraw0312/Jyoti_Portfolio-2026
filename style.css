@@ -5864,3 +5864,1573 @@ body {
   max-width: 850px;
   color: #f3ead9;
 }
+
+/* ====================================
+   ASSISTIVE MOBILITY — LANDING PAGE BOXES
+   Add to end of your style.css
+==================================== */
+
+/* Opening question box */
+.problem-intro-box {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  padding: 36px 38px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  border-left: 3px solid var(--orange);
+  background: rgba(255, 78, 23, 0.04);
+}
+
+.problem-intro-box h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: clamp(32px, 3.5vw, 42px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+}
+
+.problem-intro-box p {
+  margin-bottom: 18px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.68;
+  color: rgba(243, 234, 217, 0.86);
+}
+
+.problem-intro-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Problem friction box */
+.problem-friction-box {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  padding: 36px 38px;
+  border: 1px solid rgba(243, 234, 217, 0.12);
+  background: rgba(243, 234, 217, 0.035);
+}
+
+.problem-friction-box h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(30px, 3.2vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #f3ead9;
+}
+
+.problem-friction-box p {
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.68;
+  color: rgba(243, 234, 217, 0.86);
+}
+
+/* Methodology context box */
+.problem-methodology-box {
+  max-width: 760px;
+  margin: 0 auto 76px;
+  padding: 28px 34px;
+  border-left: 1px solid var(--orange);
+  background: rgba(243, 234, 217, 0.025);
+}
+
+.problem-methodology-box p {
+  margin-bottom: 16px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(243, 234, 217, 0.8);
+  font-style: italic;
+}
+
+.problem-methodology-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Findings grid — 3 cards */
+.findings-grid {
+  max-width: 760px;
+  margin: 0 auto 82px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.finding-card {
+  padding: 28px 24px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.finding-card span {
+  display: block;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.finding-card h3 {
+  margin: 0;
+  color: #f3ead9;
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.finding-card p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.74);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Concepts teaser */
+.concepts-teaser-box {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  padding: 32px 36px;
+  border: 1px solid rgba(243, 234, 217, 0.12);
+  border-top: 2px solid var(--orange);
+  background: rgba(255, 78, 23, 0.035);
+}
+
+.concepts-teaser-box p {
+  margin-bottom: 18px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.68;
+  color: rgba(243, 234, 217, 0.86);
+}
+
+.concepts-teaser-box p:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+  color: var(--orange);
+}
+
+/* Learning note box */
+.learning-note {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  padding: 26px 32px;
+  border-left: 2px solid rgba(243, 234, 217, 0.2);
+  background: rgba(243, 234, 217, 0.02);
+}
+
+.learning-note h3 {
+  margin: 0 0 14px;
+  color: rgba(243, 234, 217, 0.7);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.learning-note p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.74);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.62;
+}
+
+/* ====================================
+   MOBILE ADJUSTMENTS
+==================================== */
+
+@media (max-width: 760px) {
+  .problem-intro-box,
+  .problem-friction-box,
+  .problem-methodology-box,
+  .concepts-teaser-box,
+  .learning-note {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+    padding: 24px 22px;
+  }
+
+  .findings-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .finding-card {
+    padding: 24px 20px;
+  }
+
+  .finding-card span {
+    font-size: 20px;
+  }
+
+  .finding-card h3 {
+    font-size: 19px;
+  }
+
+  .finding-card p,
+  .problem-intro-box p,
+  .problem-friction-box p,
+  .problem-methodology-box p,
+  .concepts-teaser-box p,
+  .learning-note p {
+    font-size: 16px;
+    line-height: 1.58;
+  }
+
+  .problem-intro-box h2,
+  .problem-friction-box h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+}
+
+/* ====================================
+   ASSISTIVE MOBILITY — AGGRESSIVE REDESIGN
+   Add to end of style.css
+==================================== */
+
+/* INTRO HERO BOX - Big, bold opening */
+.intro-hero-box {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  padding: 54px 46px;
+  border: none;
+  border-left: 4px solid var(--orange);
+  background: rgba(255, 78, 23, 0.08);
+}
+
+.intro-hero-box h2 {
+  margin: 0 0 28px;
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(38px, 4.5vw, 54px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  color: var(--cream);
+}
+
+.intro-hero-box p {
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.72;
+  color: rgba(243, 234, 217, 0.88);
+}
+
+/* ========================================
+   APPROACH GRID — Context/Challenge/Shift
+======================================== */
+
+.approach-grid {
+  max-width: 760px;
+  margin: 0 auto 68px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.approach-card {
+  padding: 32px 28px;
+  border: 1px solid rgba(243, 234, 217, 0.12);
+  background: rgba(243, 234, 217, 0.035);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.approach-card .card-label {
+  display: block;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.approach-card h3 {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.approach-card p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.74);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FINDINGS GRID LARGE — 3 Big Cards
+======================================== */
+
+.findings-grid-large {
+  max-width: 760px;
+  margin: 0 auto 82px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.finding-card-large {
+  padding: 40px 32px 36px;
+  border: none;
+  border-top: 3px solid var(--orange);
+  background: rgba(255, 78, 23, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.finding-card-large .finding-number {
+  display: block;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.finding-card-large h3 {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.finding-card-large p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.78);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* ========================================
+   CONCEPTS SHOWCASE — Minimal List
+======================================== */
+
+.concepts-showcase {
+  max-width: 760px;
+  margin: 0 auto 58px;
+  display: grid;
+  gap: 0;
+}
+
+.concept-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 22px;
+  padding: 26px 0;
+  border-bottom: 1px solid rgba(243, 234, 217, 0.08);
+  align-items: flex-start;
+}
+
+.concept-item:last-child {
+  border-bottom: none;
+}
+
+.concept-item .concept-icon {
+  color: var(--orange);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.concept-item h3 {
+  margin: 0 0 6px;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.concept-item p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.66);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ========================================
+   THESIS STATEMENT — Bold Callout
+======================================== */
+
+.thesis-statement {
+  max-width: 760px;
+  margin: 0 auto 84px;
+  padding: 48px 44px;
+  border: 2px solid var(--orange);
+  background: rgba(255, 78, 23, 0.04);
+}
+
+.thesis-statement p {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+}
+
+/* ========================================
+   LEARNINGS GRID — 4 Items, Clean
+======================================== */
+
+.learnings-grid {
+  max-width: 760px;
+  margin: 0 auto 82px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.learning-item {
+  padding: 32px 30px;
+  border: 1px solid rgba(243, 234, 217, 0.12);
+  background: rgba(243, 234, 217, 0.025);
+}
+
+.learning-item h3 {
+  margin: 0 0 14px;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.learning-item p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.7);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ========================================
+   NEXT STEPS BOX — Call to action
+======================================== */
+
+.next-steps-box {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  padding: 44px 42px;
+  border: none;
+  border-left: 3px solid var(--orange);
+  background: rgba(255, 78, 23, 0.06);
+}
+
+.next-steps-box p {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.68;
+  letter-spacing: -0.025em;
+}
+
+/* ========================================
+   DISCUSSION CALLOUT
+======================================== */
+
+.discussion-callout {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  padding: 36px 38px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.04);
+}
+
+.discussion-callout h3 {
+  margin: 0 0 18px;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.discussion-callout p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.8);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.68;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .approach-grid,
+  .learnings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .findings-grid-large {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .intro-hero-box {
+    padding: 36px 28px;
+    margin-bottom: 56px;
+  }
+
+  .intro-hero-box h2 {
+    font-size: clamp(32px, 8vw, 44px);
+    margin-bottom: 22px;
+  }
+
+  .intro-hero-box p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .approach-grid,
+  .findings-grid-large,
+  .learnings-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 56px;
+  }
+
+  .approach-card,
+  .finding-card-large,
+  .learning-item,
+  .next-steps-box,
+  .discussion-callout {
+    padding: 28px 24px;
+  }
+
+  .approach-card h3,
+  .finding-card-large h3,
+  .learning-item h3 {
+    font-size: 20px;
+  }
+
+  .finding-card-large .finding-number {
+    font-size: 36px;
+  }
+
+  .approach-card p,
+  .finding-card-large p,
+  .learning-item p,
+  .next-steps-box p,
+  .discussion-callout p {
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .concept-item {
+    padding: 22px 0;
+    grid-template-columns: 24px 1fr;
+    gap: 16px;
+  }
+
+  .concept-item h3 {
+    font-size: 20px;
+  }
+
+  .concept-item p {
+    font-size: 14px;
+  }
+
+  .thesis-statement {
+    padding: 36px 28px;
+    margin-bottom: 66px;
+  }
+
+  .thesis-statement p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .next-steps-box {
+    margin-bottom: 48px;
+    padding: 32px 26px;
+  }
+
+  .next-steps-box p {
+    font-size: 17px;
+  }
+
+  .discussion-callout {
+    padding: 28px 24px;
+    margin-bottom: 56px;
+  }
+
+  .discussion-callout h3 {
+    font-size: 10px;
+  }
+
+  .discussion-callout p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .approach-card .card-label,
+  .learning-item p,
+  .concept-item p {
+    font-size: 14px;
+  }
+
+  .finding-card-large .finding-number {
+    font-size: 32px;
+  }
+}
+
+/* ====================================
+   ASSISTIVE MOBILITY — AGGRESSIVE REDESIGN
+   Add to end of style.css
+==================================== */
+
+/* INTRO HERO BOX - Big, bold opening */
+.intro-hero-box {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  padding: 54px 46px;
+  border: none;
+  border-left: 4px solid var(--orange);
+  background: rgba(255, 78, 23, 0.08);
+}
+
+.intro-hero-box h2 {
+  margin: 0 0 28px;
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(38px, 4.5vw, 54px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  color: var(--cream);
+}
+
+.intro-hero-box p {
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.72;
+  color: rgba(243, 234, 217, 0.88);
+}
+
+/* ========================================
+   APPROACH GRID — Context/Challenge/Shift
+======================================== */
+
+.approach-grid {
+  max-width: 760px;
+  margin: 0 auto 68px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.approach-card {
+  padding: 32px 28px;
+  border: 1px solid rgba(243, 234, 217, 0.12);
+  background: rgba(243, 234, 217, 0.035);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.approach-card .card-label {
+  display: block;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.approach-card h3 {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.approach-card p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.74);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FINDINGS GRID LARGE — 3 Big Cards
+======================================== */
+
+.findings-grid-large {
+  max-width: 760px;
+  margin: 0 auto 82px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.finding-card-large {
+  padding: 40px 32px 36px;
+  border: none;
+  border-top: 3px solid var(--orange);
+  background: rgba(255, 78, 23, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.finding-card-large .finding-number {
+  display: block;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.finding-card-large h3 {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.finding-card-large p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.78);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* ========================================
+   CONCEPT INDEX — Dieter Rams style
+======================================== */
+
+.concept-index-section {
+  max-width: 1120px;
+}
+
+.concept-index-header {
+  max-width: 1120px;
+  margin: 0 auto 36px;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  align-items: end;
+}
+
+.concept-kicker {
+  margin: 0 0 14px;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.concept-index-header h2 {
+  margin: 0;
+}
+
+.concept-index-note {
+  max-width: 360px;
+  margin: 0;
+  color: rgba(243, 234, 217, 0.62);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.concepts-gallery {
+  max-width: 1120px;
+  margin: 0 auto 82px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr;
+  gap: 42px;
+  align-items: start;
+}
+
+/* LEFT IMAGE GRID */
+.gallery-images {
+  order: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.gallery-item {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  background: #eeeeea;
+  overflow: hidden;
+  border: 1px solid rgba(243, 234, 217, 0.1);
+}
+
+.gallery-item:nth-child(5) {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gallery-item .item-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  color: #11110f;
+  background: rgba(243, 234, 217, 0.84);
+  border: 1px solid rgba(17, 17, 15, 0.14);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+/* RIGHT DESCRIPTION INDEX */
+.gallery-descriptions {
+  order: 2;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(243, 234, 217, 0.18);
+  position: sticky;
+  top: 110px;
+}
+
+.concept-description {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(243, 234, 217, 0.16);
+}
+
+.description-number {
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  padding-top: 4px;
+}
+
+.concept-description h3 {
+  margin: 0 0 7px;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.concept-description p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.62);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .concept-index-header {
+    display: block;
+  }
+
+  .concept-index-note {
+    margin-top: 18px;
+    max-width: none;
+  }
+
+  .concepts-gallery {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .gallery-descriptions {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-images {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item:nth-child(5) {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+  }
+
+  .concept-description {
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+  }
+}
+
+/* ========================================
+   THESIS STATEMENT — Bold Callout
+======================================== */
+
+.thesis-statement {
+  max-width: 760px;
+  margin: 0 auto 84px;
+  padding: 48px 44px;
+  border: 2px solid var(--orange);
+  background: rgba(255, 78, 23, 0.04);
+}
+
+.thesis-statement p {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+}
+
+/* ========================================
+   LEARNINGS GRID — 4 Items, Clean
+======================================== */
+
+.learnings-grid {
+  max-width: 760px;
+  margin: 0 auto 82px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.learning-item {
+  padding: 32px 30px;
+  border: 1px solid rgba(243, 234, 217, 0.12);
+  background: rgba(243, 234, 217, 0.025);
+}
+
+.learning-item h3 {
+  margin: 0 0 14px;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.learning-item p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.7);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ========================================
+   NEXT STEPS BOX — Call to action
+======================================== */
+
+.next-steps-box {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  padding: 44px 42px;
+  border: none;
+  border-left: 3px solid var(--orange);
+  background: rgba(255, 78, 23, 0.06);
+}
+
+.next-steps-box p {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.68;
+  letter-spacing: -0.025em;
+}
+
+/* ========================================
+   DISCUSSION CALLOUT
+======================================== */
+
+.discussion-callout {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  padding: 36px 38px;
+  border: 1px solid rgba(243, 234, 217, 0.14);
+  background: rgba(243, 234, 217, 0.04);
+}
+
+.discussion-callout h3 {
+  margin: 0 0 18px;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.discussion-callout p {
+  margin: 0;
+  color: rgba(243, 234, 217, 0.8);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.68;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .approach-grid,
+  .learnings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .findings-grid-large {
+    grid-template-columns: 1fr;
+  }
+
+  .concepts-gallery {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .gallery-images {
+    order: 1;
+  }
+
+  .gallery-descriptions {
+    order: 2;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 760px) {
+  .intro-hero-box {
+    padding: 36px 28px;
+    margin-bottom: 56px;
+  }
+
+  .intro-hero-box h2 {
+    font-size: clamp(32px, 8vw, 44px);
+    margin-bottom: 22px;
+  }
+
+  .intro-hero-box p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .approach-grid,
+  .findings-grid-large,
+  .learnings-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 56px;
+  }
+
+  .approach-card,
+  .finding-card-large,
+  .learning-item,
+  .next-steps-box,
+  .discussion-callout {
+    padding: 28px 24px;
+  }
+
+  .approach-card h3,
+  .finding-card-large h3,
+  .learning-item h3 {
+    font-size: 20px;
+  }
+
+  .finding-card-large .finding-number {
+    font-size: 36px;
+  }
+
+  .approach-card p,
+  .finding-card-large p,
+  .learning-item p,
+  .next-steps-box p,
+  .discussion-callout p {
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .concepts-gallery {
+    gap: 28px;
+    margin-bottom: 56px;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 16 / 9;
+  }
+
+  .gallery-descriptions {
+    gap: 28px;
+  }
+
+  .concept-description {
+    padding-bottom: 22px;
+  }
+
+  .concept-description h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .concept-description p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .thesis-statement {
+    padding: 36px 28px;
+    margin-bottom: 66px;
+  }
+
+  .thesis-statement p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .next-steps-box {
+    margin-bottom: 48px;
+    padding: 32px 26px;
+  }
+
+  .next-steps-box p {
+    font-size: 17px;
+  }
+
+  .discussion-callout {
+    padding: 28px 24px;
+    margin-bottom: 56px;
+  }
+
+  .discussion-callout h3 {
+    font-size: 10px;
+  }
+
+  .discussion-callout p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .approach-card .card-label,
+  .learning-item p {
+    font-size: 14px;
+  }
+
+  .finding-card-large .finding-number {
+    font-size: 32px;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item .item-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .concept-description h3 {
+    font-size: 17px;
+  }
+
+  .concept-description p {
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+   ASSISTIVE MOBILITY — FINAL CONCEPT INDEX
+================================================== */
+
+.project-detail-body.concept-index-section {
+  width: min(1080px, 100%);
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEADER */
+
+.concept-index-section .concept-index-header {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 40px;
+
+  display: grid;
+  grid-template-columns: 400px minmax(0, 1fr);
+  gap: 48px;
+  align-items: end;
+}
+
+.concept-index-section .concept-index-header h2 {
+  margin: 0;
+}
+
+.concept-index-section .concept-index-note {
+  max-width: 420px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* MAIN LAYOUT */
+
+.concept-index-section .concepts-gallery {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 80px;
+
+  display: grid;
+  grid-template-columns: 400px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+/* LEFT IMAGE GRID */
+
+.concept-index-section .gallery-images {
+  display: grid;
+  grid-template-columns: repeat(2, 195px);
+  grid-template-rows: 145px 145px 255px;
+  gap: 10px;
+  align-content: start;
+}
+
+/* ALL IMAGE FRAMES */
+
+.concept-index-section .gallery-item {
+  position: relative;
+
+  width: 195px;
+  height: 145px;
+
+  margin: 0;
+  padding: 0;
+  aspect-ratio: auto;
+
+  overflow: hidden;
+  background: #eeeeea;
+  border: 1px solid rgba(243, 234, 217, 0.12);
+}
+
+/* KEEP FULL IMAGE VISIBLE */
+
+.concept-index-section .gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  margin: 0 !important;
+  padding: 4px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #eeeeea;
+  border: 0;
+}
+
+/* FIFTH IMAGE */
+
+.concept-index-section .gallery-item:nth-child(5) {
+  grid-column: 1 / -1;
+  grid-row: 3;
+
+  width: 220px;
+  height: 255px;
+
+  justify-self: start;
+  align-self: start;
+}
+
+.concept-index-section .gallery-item:nth-child(5) img {
+  padding: 0;
+  object-fit: contain;
+}
+
+/* NUMBER CIRCLES */
+
+.concept-index-section .gallery-item .item-number {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid rgba(17, 17, 15, 0.14);
+  background: rgba(243, 234, 217, 0.94);
+
+  color: #11110f;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+}
+
+/* RIGHT DESCRIPTION LIST */
+
+.concept-index-section .gallery-descriptions {
+  position: static;
+  top: auto;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  gap: 0;
+  align-self: start;
+
+  border-top: 1px solid rgba(243, 234, 217, 0.18);
+}
+
+.concept-index-section .concept-description {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 20px;
+
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(243, 234, 217, 0.16);
+}
+
+.concept-index-section .description-number {
+  padding-top: 4px;
+  font-size: 11px;
+}
+
+.concept-index-section .concept-description h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.concept-index-section .concept-description p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* THESIS BOX */
+
+.concept-index-section .thesis-statement {
+  width: min(760px, 100%);
+  max-width: 760px;
+  margin: 0 auto 84px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .project-detail-body.concept-index-section {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .concept-index-section .concept-index-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .concept-index-section .concepts-gallery {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .concept-index-section .gallery-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 180px 180px 310px;
+  }
+
+  .concept-index-section .gallery-item {
+    width: 100%;
+    height: 180px;
+  }
+
+  .concept-index-section .gallery-item:nth-child(5) {
+    width: min(280px, 58%);
+    height: 310px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .concept-index-section .gallery-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+    gap: 14px;
+  }
+
+  .concept-index-section .gallery-item {
+    grid-column: auto;
+    grid-row: auto;
+
+    width: 100%;
+    height: 220px;
+  }
+
+  .concept-index-section .gallery-item:nth-child(5) {
+    grid-column: auto;
+    grid-row: auto;
+
+    width: min(280px, 82%);
+    height: 320px;
+  }
+
+  .concept-index-section .concept-description {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 14px;
+    padding: 20px 0;
+  }
+
+  .concept-index-section .concept-description h3 {
+    font-size: 20px;
+  }
+
+  .concept-index-section .concept-description p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}
+/* Make CONCEPT INDEX match SCENARIO ANIMATIONS label */
+
+.concept-index-section .concept-kicker {
+  margin-bottom: 18px;
+
+  color: rgba(243, 234, 217, 0.48);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* Bespoke booklet label — match carousel section labels */
+.project-detail-body .project-video-block .project-carousel-label {
+  margin: 0 0 18px;
+
+  color: rgba(243, 234, 217, 0.48);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+

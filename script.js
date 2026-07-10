@@ -355,9 +355,9 @@ const normalProjectSequence = [
   "assistive-mobility.html",
   "aura-mist.html",
   "retro-walk.html",
+  "reviving-culture.html",
   "hfd-iitb.html",
-  "connectEd.html",
-  "reviving-culture.html"
+  "connectEd.html"
 ];
 
 const hciApplicationProjectSequence = [
