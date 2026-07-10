@@ -296,15 +296,18 @@ h1 em {
 .bottom-caption {
   position: absolute;
   z-index: 5;
-  left: 155px;
+  left: auto;
+  right: 56px;
   bottom: 36px;
-  font-family: "Newsreader" , Georgia, serif;
+  width: 520px;
+  text-align: right;
+
+  font-family: "Newsreader", Georgia, serif;
   font-style: italic;
   font-size: clamp(18px, 1.6vw, 22px);
   letter-spacing: 0.01em;
   color: var(--muted-cream);
 }
-
 /* RIGHT INTRO */
 .intro-text {
   position: absolute;
@@ -7434,3 +7437,218 @@ body {
   text-transform: uppercase;
 }
 
+/* ================================
+   RESEARCH VISION — FINAL
+================================ */
+
+.research-vision {
+  position: relative;
+  width: auto;
+  max-width: none;
+  margin: 72px 7vw 90px;
+  padding: 72px 28px 84px;
+
+  border-left: 1px solid rgba(243, 234, 217, 0.7);
+  border-right: 1px solid rgba(243, 234, 217, 0.7);
+
+  background-image:
+    linear-gradient(rgba(243, 234, 217, 0.7), rgba(243, 234, 217, 0.7)),
+    linear-gradient(rgba(243, 234, 217, 0.7), rgba(243, 234, 217, 0.7));
+  background-repeat: no-repeat;
+  background-size: 28px 1px, 28px 1px;
+  background-position: left bottom, right bottom;
+}
+
+.research-vision::before,
+.research-vision::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-top: 1px solid rgba(243, 234, 217, 0.8);
+}
+
+.research-vision::before {
+  left: 0;
+}
+
+.research-vision::after {
+  right: 0;
+}
+
+.research-vision-header {
+  margin-bottom: 24px;
+}
+
+.research-vision-header .section-kicker {
+  margin: 0 0 36px;
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.research-vision-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+  color: var(--cream);
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.research-vision-intro {
+  margin: 0 0 48px;
+  text-align: center;
+  color: rgba(243, 234, 217, 0.78);
+  font-family: "Newsreader", Georgia;
+  font-size: 21px;
+}
+
+.research-vision-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 72px;
+}
+
+.vision-card {
+  min-height: 250px;
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-number {
+  margin-bottom: 42px;
+
+  color: var(--orange);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.vision-card h3 {
+  margin: 0 0 22px;
+
+  color: var(--cream);
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.08;
+  letter-spacing: 0.028em;
+}
+
+.vision-card p {
+  margin: 0;
+
+  color: rgba(243, 234, 217, 0.72);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.62;
+}
+
+.vision-projects {
+  margin-top: auto !important;
+  padding-top: 42px;
+
+  display: flex;
+  gap: 14px;
+}
+
+.vision-projects a {
+  color: var(--orange);
+  text-decoration: none;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+
+.vision-projects a:hover {
+  color: var(--cream);
+}
+
+/* MOBILE */
+@media (max-width: 980px) {
+  .research-vision {
+    margin: 90px 18px 110px;
+    padding: 58px 28px 66px;
+  }
+
+  .research-vision-main {
+    font-size: clamp(28px, 8vw, 42px);
+    text-align: left;
+  }
+
+  .research-vision-cards {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
+  .vision-card {
+    min-height: auto;
+  }
+
+  .research-vision-intro {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+}
+
+/* MISC PAGE */
+
+.misc-page {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.misc-page .writing-section,
+.misc-page .photo-section,
+.misc-page .reading-section {
+  min-height: 100vh;
+}
+
+.misc-back-wrap {
+  padding: 42px 7vw 0;
+  background: var(--black);
+}
+
+.misc-back {
+  display: inline-block;
+  color: var(--cream);
+  text-decoration: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.misc-back:hover {
+  color: var(--orange);
+  transform: translateX(-4px);
+}
+
+.misc-footnote {
+  position: absolute;
+  z-index: 5;
+  left: 44px;
+  bottom: 38px;
+
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: rgba(243, 234, 217, 0.68);
+  letter-spacing: 0.02em;
+}
