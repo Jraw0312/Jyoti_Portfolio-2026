@@ -378,8 +378,13 @@ const projectSequence = isHciApplication
 const nextProjectLink = document.querySelector(".project-next-link");
 
 if (nextProjectLink) {
-  const currentPage = window.location.pathname.split("/").pop();
-  const currentIndex = projectSequence.indexOf(currentPage);
+ let currentPage = window.location.pathname.split("/").pop();
+
+if (!currentPage.endsWith(".html")) {
+  currentPage += ".html";
+}
+
+const currentIndex = projectSequence.indexOf(currentPage);
 
   if (currentIndex !== -1) {
     const nextIndex = (currentIndex + 1) % projectSequence.length;
